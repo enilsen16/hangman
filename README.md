@@ -4,9 +4,10 @@ A version of hangman built using Ruby.
 
 ## Set-up Instructions
 
-- Clone the repo and cd into the directory
+- Unzip Erik_Nilsen_Hangman.zip and cd into the directory
 - Make sure to `bundle` to properly install all dependencies.
 - `./bin/hangman` will run the program once
+- if necessary allow execution permissions for ./bin/hangman by doing `chmod +x ./bin/hangman`
 
 
 ## Thoughts
