@@ -3,7 +3,7 @@ module Hangman
 
 
     def initialize
-      @conn = Faraday.new(:url => 'http://gallows.hulu.com') do |faraday|
+      @conn = Faraday.new(:url => '') do |faraday|
         faraday.request :url_encoded
         faraday.adapter Faraday.default_adapter
       end
@@ -18,7 +18,7 @@ module Hangman
         break if @health == "FREE" || @health == "DEAD"
         puts "Human #{@token} has #{@remaining_guesses} guesses left"
         puts "The current string is #{@state} and the guess is: #{x}"
-        response = @conn.get "/play?code=enilsen16@live.com&token=#{@token}&guess=#{x}"
+        response = @conn.get "&token=#{@token}&guess=#{x}"
         @human = response.body
         parse_json(@human)
       end
@@ -36,7 +36,7 @@ module Hangman
     end
 
     def get
-      response = @conn.get '/play?code=enilsen16@live.com'
+      response = @conn.get ''
       @human = response.body
     end
 
