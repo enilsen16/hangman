@@ -2,14 +2,6 @@
 
 A version of hangman built using Ruby.
 
-## Set-up Instructions
-
-- Make sure you have access to a API
-- Make sure to `bundle` to properly install all dependencies.
-- `./bin/hangman` will run the program once
-- if necessary allow execution permissions for ./bin/hangman by doing `chmod +x ./bin/hangman`
-
-
 ## Thoughts
 
 Originally I set out to try to reinvent the wheel; however after taking a step back and looking at the goal of the program, I decided to test the most commonly used letters by iterating over an array. Using a BDD approach I tried to design a program that will return results quickly.
@@ -25,6 +17,7 @@ I know now that a better solution would be to analyze the lengths of each word i
 ## TODO
 If I had more time, I would add these features:
 
+- Convert to work with user input
 - Refactor code into multiple files or even a gem
 - Optimize algorithm to iterate over a dictionary file or use a DAFSA
 - Cleanup and add more tests to better my test coverage
